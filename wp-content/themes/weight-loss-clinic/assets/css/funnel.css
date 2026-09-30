@@ -1,0 +1,373 @@
+/* ── Pre-Checkout Page ────────────────────────────────────────────
+   Conviction page between quiz result and Stripe checkout.
+   ────────────────────────────────────────────────────────────────── */
+
+.fc-section--precheckout {
+    padding: var(--fc-space-3xl) 0 var(--fc-space-4xl);
+}
+
+.fc-precheckout {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ── Badge ── */
+
+.fc-precheckout__badge {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(27, 122, 90, 0.1);
+    color: var(--fc-green, #1B7A5A);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: var(--fc-space-lg);
+}
+
+.fc-precheckout__header h1 {
+    margin-bottom: var(--fc-space-md);
+}
+
+.fc-precheckout__subhead {
+    font-size: var(--fc-text-body);
+    color: var(--fc-gray-700, #4A4744);
+    line-height: var(--fc-leading-normal, 1.65);
+    max-width: 520px;
+    margin: 0 auto var(--fc-space-2xl);
+}
+
+/* ── Process Steps ── */
+
+.fc-precheckout__process {
+    background: var(--fc-white, #FFFFFF);
+    border: 1px solid var(--fc-gray-100, #E8E4DF);
+    border-radius: var(--fc-radius-lg, 20px);
+    padding: var(--fc-space-xl) var(--fc-space-xl);
+    margin-bottom: var(--fc-space-2xl);
+    text-align: left;
+}
+
+.fc-precheckout__process h2 {
+    text-align: center;
+    margin-bottom: var(--fc-space-lg);
+}
+
+.fc-precheckout__steps {
+    list-style: none;
+    counter-reset: precheckout-step;
+    padding: 0;
+    margin: 0;
+}
+
+.fc-precheckout__steps li {
+    counter-increment: precheckout-step;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: var(--fc-space-lg);
+}
+
+.fc-precheckout__steps li:last-child {
+    margin-bottom: 0;
+}
+
+.fc-precheckout__steps li::before {
+    content: counter(precheckout-step);
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--fc-green, #1B7A5A);
+    color: var(--fc-white, #FFFFFF);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fc-precheckout__steps strong {
+    display: block;
+    font-size: var(--fc-text-small, 0.9375rem);
+    font-weight: 600;
+    color: var(--fc-black, #1A1A18);
+    margin-bottom: 0.25rem;
+}
+
+.fc-precheckout__steps span {
+    font-size: var(--fc-text-small, 0.9375rem);
+    color: var(--fc-gray-700, #4A4744);
+    line-height: var(--fc-leading-normal, 1.65);
+}
+
+/* ── Pricing ── */
+
+.fc-precheckout__pricing {
+    margin-bottom: var(--fc-space-2xl);
+}
+
+.fc-precheckout__price {
+    font-size: 1.125rem;
+    color: var(--fc-gray-700, #4A4744);
+    margin-bottom: var(--fc-space-xs);
+}
+
+.fc-precheckout__price strong {
+    font-size: 1.375rem;
+    color: var(--fc-black, #1A1A18);
+}
+
+.fc-precheckout__price-note {
+    font-size: var(--fc-text-xs, 0.8125rem);
+    color: var(--fc-gray-500, #7A7672);
+    line-height: var(--fc-leading-normal, 1.65);
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* ── Trust Signals ── */
+
+.fc-precheckout__trust {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--fc-space-lg);
+    margin-bottom: var(--fc-space-2xl);
+}
+
+.fc-precheckout__trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: var(--fc-text-xs, 0.8125rem);
+    font-weight: 500;
+    color: var(--fc-gray-700, #4A4744);
+    white-space: nowrap;
+}
+
+.fc-precheckout__trust-icon {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+/* ── CTA ── */
+
+.fc-precheckout__cta-wrap {
+    margin-bottom: var(--fc-space-2xl);
+}
+
+.fc-precheckout__cta {
+    display: inline-block;
+    min-width: 280px;
+    font-size: 1.0625rem;
+}
+
+.fc-precheckout__cta-note {
+    font-size: var(--fc-text-xs, 0.8125rem);
+    color: var(--fc-gray-500, #7A7672);
+    margin-top: var(--fc-space-sm);
+}
+
+/* ── Disclaimer ── */
+
+.fc-precheckout__disclaimer {
+    border-top: 1px solid var(--fc-gray-100, #E8E4DF);
+    padding-top: var(--fc-space-xl);
+    text-align: left;
+}
+
+.fc-precheckout__disclaimer p {
+    font-size: var(--fc-text-xs, 0.8125rem);
+    color: var(--fc-gray-500, #7A7672);
+    line-height: var(--fc-leading-normal, 1.65);
+    margin-bottom: var(--fc-space-sm);
+}
+
+.fc-precheckout__disclaimer p:last-child {
+    margin-bottom: 0;
+}
+
+.fc-precheckout__disclaimer a {
+    color: var(--fc-green, #1B7A5A);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+
+/* ── Thank You / Onboarding Page ─────────────────────────────────
+   Post-payment confirmation and next-steps page.
+   ────────────────────────────────────────────────────────────────── */
+
+.fc-section--thankyou {
+    padding: var(--fc-space-3xl) 0 var(--fc-space-4xl);
+}
+
+.fc-thankyou {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.fc-thankyou__header {
+    text-align: center;
+    margin-bottom: var(--fc-space-2xl);
+}
+
+.fc-thankyou__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(27, 122, 90, 0.1);
+    color: var(--fc-green, #1B7A5A);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: var(--fc-space-lg);
+}
+
+.fc-thankyou__subhead {
+    font-size: var(--fc-text-body);
+    color: var(--fc-gray-700, #4A4744);
+    line-height: var(--fc-leading-normal, 1.65);
+    max-width: 520px;
+    margin: var(--fc-space-md) auto 0;
+}
+
+/* ── Timeline ── */
+
+.fc-thankyou__timeline {
+    background: var(--fc-white, #FFFFFF);
+    border: 1px solid var(--fc-gray-100, #E8E4DF);
+    border-radius: var(--fc-radius-lg, 20px);
+    padding: var(--fc-space-xl);
+    margin-bottom: var(--fc-space-2xl);
+}
+
+.fc-thankyou__timeline h2 {
+    margin-bottom: var(--fc-space-lg);
+}
+
+.fc-thankyou__steps {
+    list-style: none;
+    counter-reset: thankyou-step;
+    padding: 0;
+    margin: 0;
+}
+
+.fc-thankyou__steps li {
+    counter-increment: thankyou-step;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: var(--fc-space-lg);
+}
+
+.fc-thankyou__steps li:last-child {
+    margin-bottom: 0;
+}
+
+.fc-thankyou__steps li::before {
+    content: counter(thankyou-step);
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--fc-green, #1B7A5A);
+    color: var(--fc-white, #FFFFFF);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fc-thankyou__steps strong {
+    display: block;
+    font-size: var(--fc-text-small, 0.9375rem);
+    font-weight: 600;
+    color: var(--fc-black, #1A1A18);
+    margin-bottom: 0.25rem;
+}
+
+.fc-thankyou__steps span {
+    font-size: var(--fc-text-small, 0.9375rem);
+    color: var(--fc-gray-700, #4A4744);
+    line-height: var(--fc-leading-normal, 1.65);
+}
+
+/* ── Important / Support ── */
+
+.fc-thankyou__important,
+.fc-thankyou__support {
+    margin-bottom: var(--fc-space-2xl);
+}
+
+.fc-thankyou__important ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: var(--fc-space-md) 0 0;
+}
+
+.fc-thankyou__important li {
+    font-size: var(--fc-text-small, 0.9375rem);
+    color: var(--fc-gray-700, #4A4744);
+    line-height: var(--fc-leading-normal, 1.65);
+    margin-bottom: var(--fc-space-xs);
+}
+
+.fc-thankyou__support a {
+    color: var(--fc-green, #1B7A5A);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.fc-thankyou__cta-wrap {
+    text-align: center;
+}
+
+/* ── Outline Button ── */
+
+.fc-btn--outline {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    font-family: var(--fc-font-body);
+    font-size: var(--fc-text-small, 0.9375rem);
+    font-weight: 600;
+    color: var(--fc-green, #1B7A5A);
+    background: transparent;
+    border: 1.5px solid var(--fc-green, #1B7A5A);
+    border-radius: var(--fc-radius-full, 9999px);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background var(--fc-duration) var(--fc-ease), color var(--fc-duration) var(--fc-ease);
+}
+
+.fc-btn--outline:hover {
+    background: var(--fc-green, #1B7A5A);
+    color: var(--fc-white, #FFFFFF);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 480px) {
+    .fc-precheckout__trust {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--fc-space-xs);
+    }
+
+    .fc-precheckout__cta {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .fc-precheckout__process,
+    .fc-thankyou__timeline {
+        padding: var(--fc-space-lg);
+    }
+}

@@ -1,0 +1,4 @@
+# SP-IR-deny-php
+<FilesMatch "\.(php|phtml|pht|phar)$">
+Require all denied
+</FilesMatch>
